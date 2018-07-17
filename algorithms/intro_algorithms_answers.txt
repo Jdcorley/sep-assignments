@@ -1,0 +1,37 @@
+DEF TIP(bill)
+  SET bill to bill
+  
+  ITERATE through bill until TOTAL found
+    SET TOTAL to bill_total
+    SET tip_percent to amount desired
+    COMPUTE tip BY multipling bill_total by tip_percent
+    RETURN TIP
+  END 
+END 
+
+DEF COFFEE(BEANS, GINDER, MACHINE)
+  SET beans to whole_beans 
+  SET grinder to ginder 
+  SET machine to machine 
+  
+  WHILE beans are whole 
+    GRIND in grinder
+    RETURN ground_coffee
+  end 
+    RUN ground_coffee through machine
+    RETURN coffee_to_drink
+end 
+    
+DEF GET_DRESSED(pile_of_cloths, my_body)
+  SET pile_of_cloths to clothing
+  SET my_body to body
+
+  WHILE NOT dressed
+    ITERATE through clothing
+      IF body part not clothed
+        DRESS
+        RETURN DRESSED_BODY
+      end 
+    end
+  end
+end 
