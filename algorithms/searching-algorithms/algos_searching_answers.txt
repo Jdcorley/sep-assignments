@@ -1,0 +1,49 @@
+1. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+  A: It would take 7 iterations to find the value G.
+
+2. Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+  A: At most 3 iterations because you would split it at the midpoint 13 and eliminate half of your options then split it again at either 6 or 
+  7 either hitting G on the second iteration or taking one more if it missed. 
+
+3. Calculate fib(10), fib(11) and fib(12) by hand.
+
+  A: fib(10) = fib(10-1) + fib(10-2)
+                    |          |
+                  fib(9) + fib(8)
+                   /            \
+               = 34     +     = 21
+                         =55
+
+    fib(11) = fib(11-1) + fib(11-2)
+                 |             |
+                fib(10)     fib(9)
+                = 55    +   = 34
+                       =89
+
+    fib(12) = fib(12-1) + fib(12-2)
+                |           |
+                fib(11) +  fib(10)
+                = 89    +  = 55
+                       =144 
+
+Recursive Fibonacci vs Iterative Fibonacci Algorithm Benchmarks: 
+  Runtime Recursive 1: 1.3840035535395145e-06
+  Runtime Recursive 2: 1.0569929145276546e-06
+  Runtime Iterative: 8.049973985180259e-07
+
+1. Given an UNSORTED collection of a million items, 
+which algorithm would you choose between linear search and binary search? 
+Would you use an iterative or recursive solution? Explain your reasoning.
+  A: For unsorted I would use a linear iterative search because since they are in 
+  no particular order you are going to have to iterate through them one at a time 
+  until you find the answer.
+
+2. Given a SORTED collection of a million items, 
+which algorithm would you choose between linear search and binary search? 
+Would you use an iterative or recursive solution? Explain your reasoning.
+  A: For a sorted list I would use a recursive binary search because you can significantly 
+  reduce the time it takes to find an item thats sorted through a binary search as suppose to linear. 
+  The linear search could take up to a million steps and the binary search while the binary search only increases 
+  by one step every time you double the number of sorted items you are searching through. 
