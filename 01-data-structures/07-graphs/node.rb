@@ -1,9 +1,9 @@
-class Actor
-  attr_accessor :name 
-  attr_accessor :film_actor_hash
+class Film  
+  attr_accessor :name
+  attr_accessor :cast
 
   def initialize(name)
-    @name = name 
-    @film_actor_hash = Hash.new 
-  end 
+    @name = name
+    @cast = Array.new
+  end
 end 
