@@ -1,4 +1,7 @@
-  require 'Benchmark'
+require 'benchmark'
+
+test_array = (1..50).to_a.shuffle 
+array_before = print test_array
   
     time = Benchmark.realtime do 
 
@@ -32,4 +35,7 @@
         end 
       end 
     end 
+
+test_me = merge_sort(test_array)
+puts "#{array_before}\n took merge sort #{time}\n to sort into:\n #{test_me}."
 

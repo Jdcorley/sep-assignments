@@ -1,6 +1,9 @@
-  require 'Benchmark'
+require 'benchmark'
+
+test_array = (1..50).to_a.shuffle 
+array_before = print test_array
     
-  time = Benchmark.time do   
+  time = Benchmark.realtime do   
 
     def bubble_sort(collection)
       n = collection.length 
@@ -22,3 +25,6 @@
       collection
     end 
   end
+
+  test_me = bubble_sort(test_array)
+  puts "#{array_before}\n took bubble sort #{time}\n to sort into:\n #{test_me}."

@@ -1,5 +1,8 @@
 require 'benchmark'
 
+test_array = (1..50).to_a.shuffle 
+array_before = print test_array
+
   time = Benchmark.realtime do 
     
     def insert_sort(collection)
@@ -27,6 +30,9 @@ require 'benchmark'
       sorted_collection
     end 
   end 
+
+test_me = insert_sort(test_array)
+puts "#{array_before}\n took insert sort #{time}\n to sort into:\n #{test_me}."
 
 
 
