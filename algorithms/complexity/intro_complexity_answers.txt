@@ -1,0 +1,46 @@
+1. Describe an analogy for relating an algorithm that has efficiency O(1) and another algorithm that has O(2n).
+
+  A: O(1) is ferrari O(2n) is a prius. 
+
+2. In plain English, what is the best case scenario for binary search?
+
+  A: In the best case scenario a binary search will never increase the amount of steps needed to runeven when the data amount increases.
+
+3. In plain English, what is the worst-case scenario for binary search?
+
+  A: In the worst case scenario it when the data for a binary search doubles the runtime increases by 
+  one extra step. 
+
+4. In plain English, what is the bounded-case scenario for binary search?
+
+  A: The bounded-case scenario for binary search is the space between the worst case and best cast of taking no extra steps when data increases or taking one ectra step when the data doubles. 
+
+5. Graph with CSV data.
+
+6. What is the limit of the function above as n approaches infinity?
+
+  A: O(logn), in other words as n increases the operations carried out increases by N squared. 
+    Or if you take the number of elements and divide it by two until you hit one you will get the number
+    operations required to run the algorithm.
+
+7. What is Big-O of an algorithm that has the data points above?
+  A: Big-O of the given data points is O(log n).
+
+8. Write a Ruby method that takes a number n. This method must print the worst-case number of iterations for linear search to find 
+an item in collections of size one to n. Use it to generate a table of worst-case iterations of collections up to size 10.
+
+9. Create a graph from the output using Google Sheets or other graphing software. Analyze the graph and denote its Big-O somewhere on the graph.
+
+10. What is the Big-O of binary search?
+
+ A: Big-O of binary search is O(n).
+
+11. What is the Big-omega of binary search?
+
+  A: Big-omega of binary search is is Omega(log2n)
+
+
+12. What is the Big theta of binary search?
+
+  A: Theta(lg n)
+
