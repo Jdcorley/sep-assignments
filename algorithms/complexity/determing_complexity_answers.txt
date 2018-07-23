@@ -1,0 +1,132 @@
+1. What's Big-O of the following algorithm?
+
+  def goodbye_world(n)
+    puts "Goodbye World! #{n}"
+  end 
+  
+  A: This is constant time or Big O(1) because no matter what n is in this method it is always going to take the same
+  amount of steps to run the method which is the one step that prints our "Goodbye World! and the value of n".
+
+2. Whats Big-O of the following algorithm?
+
+  def find_largest(collection)
+    largest = collection[0]
+    collection.length.times do |i|
+    if collection[i] >= largest 
+      largest = collection[i]
+    end 
+  end 
+  largest
+end 
+
+  A: This is linear or Big O(n) becasuse as the number of elements n increase in this method so does the  worst case scenario run time. The number of operations in the worst case for the method is going to be
+  equivilent to the number of elements inputed into the method.
+
+3. What's the Big-O of the following algorithm?
+
+  def find_largest(collection)
+    largest = collection[0][0] 
+
+    collection.length.times do |i|
+      subcollection = collection[i]
+
+      subcollection.length.times do |j|
+        if subcollection[j] >= largest 
+          largest = subcollection[j]
+        end 
+      end 
+    end 
+    largest 
+  end 
+
+  A: This may still Big O(n) because all it is doing is iterating through a collection of n elements, 
+  and then a subcollection of that collection (the array within the array) and comparing the subcollection to the already set largest variable at collection[0][0]. The number of iterations would increase by n in the worst case scenario there for it is linear complexity Big O(n).
+
+4. What's Big-O of the following algorithm?
+
+  def numbers(n)
+    if (n==0)
+      return 0 
+    elsif (n==1)
+      return 1
+    else 
+      return numbers(n-1) + numbers(n-2)
+    end 
+  end 
+
+  A: This would be big O(1) because the operations are going to be the same amount no matter how big n gets.
+
+5. What's the Big-O of the following algorithm?
+
+  def iterative(n)
+ num1 = 0
+ num2 = 1
+
+ i = 0
+ while i < n-1
+   tmp = num1 + num2
+   num1 = num2
+   num2 = tmp
+   i+=1
+ end
+
+ num2
+end
+
+  A: This is Big O(n) because as n increases so does the amount of iterations the while loop will have to go through. 
+
+6. What's the Big-O of the following algorithm?
+
+  def sort(collection, from=0, to=nil)
+ if to == nil
+   # Sort the whole collection, by default
+   to = collection.count - 1
+ end
+
+ if from >= to
+   # Done sorting
+   return
+ end
+
+ # Take a pivot value, at the far left
+ pivot = collection[from]
+
+ # Min and Max pointers
+ min = from
+ max = to
+
+ # Current free slot
+ free = min
+
+ while min < max
+   if free == min # Evaluate collection[max]
+     if collection[max] <= pivot # Smaller than pivot, must move
+       collection[free] = collection[max]
+       min += 1
+       free = max
+     else
+       max -= 1
+     end
+   elsif free == max # Evaluate collection[min]
+     if collection[min] >= pivot # Bigger than pivot, must move
+       collection[free] = collection[min]
+       max -= 1
+       free = min
+     else
+       min += 1
+     end
+   else
+     raise "Inconsistent state"
+   end
+ end
+
+ collection[free] = pivot
+
+ sort collection, from, free - 1
+ sort collection, free + 1, to
+
+ collection
+end
+
+
+  A: I would say this is loglinear or O(n log n) as n increases the worst case scenario will increase by log in a linear manner in accordance with n.  
