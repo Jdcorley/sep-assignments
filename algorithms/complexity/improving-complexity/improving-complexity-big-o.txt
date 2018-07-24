@@ -1,0 +1,8 @@
+Improving Complexity One: O(n^2) + O(n^2) therefore Big O(n^2).
+
+Improving Complexity Two: O(n^2) + O(n log n) in worst case still Big O(n^2) because of
+the combining arrays step. 
+
+Improving Complexity three: O(1) + O(n^2) I swapped out the combining double each loop 
+for arrays.flatten but since sorting essentially stayed the same as the first one Big O
+still turns out to be O(n^2).
